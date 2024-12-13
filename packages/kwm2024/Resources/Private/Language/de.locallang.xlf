@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2024-11-08UTC08:41:120">
+        <header>
+            <authorName>Emily Huber</authorName>
+            <authorEmail>s2310456008@fhooe.at</authorEmail>
+        </header>
+        <body>
+        <trans-unit id="search">
+           <source>Search</source>
+           <target>Suche</target>
+       </trans-unit>
+       <trans-unit id="infobox_header">
+              <target>Hier kommt der Inhalt</source>
+       </trans-unit>
+        </body>
+    </file>
+</xliff>
