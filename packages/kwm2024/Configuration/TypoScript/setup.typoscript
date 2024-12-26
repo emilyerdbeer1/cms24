@@ -56,3 +56,6 @@ lib.record {
     tables = tt_content
     source = 38
 }
+
+#plugin.tx_form.settings.yamlConfigurations.100 = EXT:kwm2024/Configuration/Form/Setup.yaml
+#module.tx_form.settings.yamlConfigurations.100 = EXT:kwm2024/Configuration/Form/Setup.yaml
