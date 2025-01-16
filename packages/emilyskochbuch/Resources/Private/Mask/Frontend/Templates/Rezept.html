@@ -1,0 +1,50 @@
+<f:if condition="{data.tx_mask_heading}">
+    <h1 class="recipe-title">{data.tx_mask_heading -> f:format.nl2br()}</h1>
+</f:if>
+
+<div class="recipe-image-container">
+    <f:for each="{data.tx_mask_image}" as="file">
+        <f:media file="{file}" class="recipe-image" />
+    </f:for>
+
+    <!-- Recipe Likes -->
+    <div class="recipe-likes">
+        <button class="like-button">
+            <svg class="heart-icon empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 21c-5.1-4.2-9-7.5-9-11A6 6 0 0 1 12 3a6 6 0 0 1 9 7c0 3.5-3.9 6.8-9 11z"></path>
+            </svg>
+        </button>
+        <span class="like-counter" data-id="{data.uid}" data-likes="{data.likes}">{data.likes}</span>
+    </div>
+</div>
+
+<!-- Recipe Details -->
+<div class="recipe-details">
+    {data.tx_mask_information -> f:format.nl2br()}
+</div>
+
+<!-- Recipe Cards -->
+<div class="recipe-cards">
+    <!-- Zutaten Card -->
+    <div class="recipe-card zutaten-card">
+        <h2 class="recipe-card-title">Zutaten</h2>
+        <p>{data.tx_mask_zutaten -> f:format.nl2br()}</p>
+    </div>
+
+    <!-- Zubereitung Card -->
+    <div class="recipe-card zubereitung-card">
+        <h2 class="recipe-card-title">Zubereitung</h2>
+        <p>{data.tx_mask_zubereitung -> f:format.nl2br()}</p>
+    </div>
+
+    <!-- Tipp Card -->
+    <div class="recipe-card tipp-card">
+        <h2 class="recipe-card-title">Tipp</h2>
+        <p>{data.tx_mask_tipp -> f:format.nl2br()}</p>
+        <f:if condition="{data.tx_mask_tipimage}">
+            <f:for each="{data.tx_mask_tipimage}" as="tipImage">
+                <f:media file="{tipImage}" class="tip-image" />
+            </f:for>
+        </f:if>
+    </div>
+</div>

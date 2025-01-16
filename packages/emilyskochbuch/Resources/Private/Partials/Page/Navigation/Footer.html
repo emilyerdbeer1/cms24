@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<div class="footer-container">
+    <!-- Linker Container -->
+    <div class="footer-left">
+        <ul class="footer-links">
+            <li>
+                <a href="/impressum" title="Impressum">Impressum</a>
+            </li>
+            <li>
+                <a href="/datenschutz" title="Datenschutz">Datenschutz</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Mittlerer Container -->
+    <div class="footer-center">
+        <span>© 2024 Emily’s Kochbuch</span>
+    </div>
+
+    <!-- Rechter Container -->
+    <div class="footer-right">
+        <f:if condition="{languagenavigation}">
+            <ul class="language-menu">
+                <f:for each="{languagenavigation}" as="item">
+                    <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'inactive')}">
+                        <f:if condition="{item.available}">
+                            <f:then>
+                                <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                                    <span>{item.navigationTitle}</span>
+                                </a>
+                            </f:then>
+                            <f:else>
+                                <span>{item.navigationTitle}</span>
+                            </f:else>
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+        </f:if>
+    </div>
+</div>
+
+</html>

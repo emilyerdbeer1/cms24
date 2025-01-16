@@ -1,0 +1,58 @@
+<!--<div class="ns-form-group width-50">
+	<label for="name">
+		<f:translate key="tx_nsguestbook_domain_model_nsguestbook.name" /> <span class="required">*</span>
+	</label>
+	<f:form.textfield property="name" value="{nsguestbookdata.name}" required="true"/>
+</div>
+<div class="ns-form-group width-50">
+	<label for="email">
+		<f:translate key="tx_nsguestbook_domain_model_nsguestbook.email" /> <span class="email">*</span>
+	</label>
+	<f:form.textfield type="email" property="email" value="{nsguestbookdata.email}" required="true" />
+</div>
+<f:comment>
+<div class="ns-form-group width-50">
+	<label for="website">
+		<f:translate key="tx_nsguestbook_domain_model_nsguestbook.website" />
+	</label>
+	<f:form.textfield property="website" value="{nsguestbookdata.website}" />
+</div> </f:comment>
+<div class="ns-form-group width-50">
+	<label for="city">
+		<f:translate key="tx_nsguestbook_domain_model_nsguestbook.city" />
+	</label>
+	<f:form.textfield property="city" value="{nsguestbookdata.city}" />
+</div>
+<div class="ns-form-group">
+	<label for="message">
+		<f:translate key="tx_nsguestbook_domain_model_nsguestbook.message" />
+	</label>
+	<f:form.textarea property="message" id="editor1" rows="10" cols="120" value="{nsguestbookdata.message}" />
+</div>
+<f:if condition="{settings.termsRequired}">
+	<div class="ns-form-group">
+		<label for="terms" class="ns-form-checkbox">
+			<f:translate key="terms" />
+		</label>
+		<div class="ns-form-group__condition">
+			<f:form.checkbox property="terms" id="terms" value="1" required="true"/>
+			<f:translate key="acceptTerms" /><f:link.external uri="{settings.termsTypolinkParameter}" target="_blank"><f:translate key="readTerms" /></f:link.external><span class="terms">*</span>
+
+		</div>
+	</div>
+</f:if>
+-->
+
+
+<div class="ns-form-group width-50">
+    <label for="title">Titel
+        <f:translate key="tx_nsguestbook_domain_model_nsguestbook.title" /> <span class="required">*</span>
+    </label>
+    <f:form.textfield property="title" value="{nsguestbookdata.title}" required="true"/>
+</div>
+<div class="ns-form-group">
+    <label for="description">Beschreibung
+        <f:translate key="tx_nsguestbook_domain_model_nsguestbook.description" /> <span class="required">*</span>
+    </label>
+    <f:form.textarea property="description" rows="10" cols="120" value="{nsguestbookdata.description}" />
+</div>

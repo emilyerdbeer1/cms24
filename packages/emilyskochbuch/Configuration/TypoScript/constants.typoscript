@@ -58,3 +58,24 @@ plugin.bootstrap_package.settings.scss {
     primary = #eb3e4a
     secondary = #013859
 }
+
+#footer
+page.theme.footernavigation {
+    navigationType = Directory
+    navigationValue = 84
+    enable = 1
+}
+
+#login
+plugin.tx_felogin_login.view.templateRootPath = EXT:emilyskochbuch/Resources/Private/Templates/ContentElements/
+
+#guestbook
+plugin.tx_nsguestbook_form.view.templateRootPath = EXT:emilyskochbuch/Resources/Private/Templates/
+
+
+#news
+newsplugin.tx_news.view.twb5 {
+    layoutRootPath = EXT:mythologie/Resources/Private/Layouts/
+    templateRootPath = EXT:mythologie/Resources/Private/Templates/
+    partialRootPath = EXT:mythologie/Resources/Private/Partials/
+}

@@ -1,6 +1,10 @@
 ######################
 #### DEPENDENCIES ####
 ######################
+@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:ns-guestbook/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 
 
@@ -10,6 +14,20 @@
 page {
     includeCSS {
         theme = EXT:emilyskochbuch/Resources/Public/Scss/Theme/theme.scss
+        adobeFonts = https://use.typekit.net/lpz6czh.css
+        bodyFont = https://use.typekit.net/wbx2wou.css
+        header = EXT:emilyskochbuch/Resources/Public/Scss/Theme/header.scss
+        fonts = EXT:emilyskochbuch/Resources/Public/Scss/Theme/fonts.scss
+        button = EXT:emilyskochbuch/Resources/Public/Scss/Theme/button.scss
+        card = EXT:emilyskochbuch/Resources/Public/Scss/Theme/card.scss
+        footer = EXT:emilyskochbuch/Resources/Public/Scss/Theme/footer.scss
+        formular = EXT:emilyskochbuch/Resources/Public/Scss/Theme/formular.scss
+        round_elements = EXT:emilyskochbuch/Resources/Public/Scss/Theme/round_elements.scss
+        guestbook = EXT:emilyskochbuch/Resources/Public/Scss/Theme/guestbook.scss
+        recipe-likes = EXT:emilyskochbuch/Resources/Public/Scss/Theme/recipe-likes.scss
+        news = EXT:emilyskochbuch/Resources/Public/Scss/Theme/news.scss
+        carousel = EXT:emilyskochbuch/Resources/Public/Scss/Theme/carousel.scss
+        customcarousel = EXT:emilyskochbuch/Resources/Public/Scss/Theme/customcarousel.scss
     }
 
     includeJSLibs {
@@ -26,5 +44,32 @@ page {
 
     includeJSFooter {
         emilyskochbuch_scripts = EXT:emilyskochbuch/Resources/Public/JavaScript/Dist/scripts.js
+        //HIER MEIN JS EINFÜGEN
+        likeFunction = EXT:emilyskochbuch/Resources/Public/JavaScript/Dist/like-function.js
+
+
     }
 }
+
+lib.tipsCarousel = FLUIDTEMPLATE
+lib.tipsCarousel {
+    file = EXT:emilyskochbuch/Resources/Private/Partials/ContentElements/CustomCarousel.html
+    variables {
+        tips = CONTENT
+        tips {
+            table = tt_content
+            select {
+                pidInList = this
+                where = CType = 'tip'
+                orderBy = sorting
+                languageField = sys_language_uid
+            }
+        }
+    }
+}
+
+plugin.tx_form.settings.yamlConfigurations.100 = EXT:emilyskochbuch/Configuration/Form/Setup.yaml
+module.tx_form.settings.yamlConfigurations.100 = EXT:emilyskochbuch/Configuration/Form/Setup.yaml
+
+
+

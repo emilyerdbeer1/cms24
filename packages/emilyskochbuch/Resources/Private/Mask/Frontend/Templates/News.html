@@ -1,0 +1,34 @@
+<!--
+<f:if condition="{data.tx_mask_heading}">
+    {data.tx_mask_heading -> f:format.nl2br()}
+</f:if>
+<f:for each="{data.tx_mask_image}" as="file">
+    <f:media file="{file}" width="200" />
+    {file.description}
+</f:for>
+<f:if condition="{data.tx_mask_text}">
+    {data.tx_mask_text -> f:format.html()}
+</f:if>
+-->
+
+<div class="news-container">
+    <div class="news-card">
+        <f:if condition="{data.tx_mask_heading}">
+            <h2 class="news-title">{data.tx_mask_heading -> f:format.nl2br()}</h2>
+        </f:if>
+
+        <f:for each="{data.tx_mask_image}" as="file">
+            <div class="news-image">
+                <f:media file="{file}" width="200" />
+                <p class="image-description">{file.description}</p>
+            </div>
+        </f:for>
+
+        <f:if condition="{data.tx_mask_text}">
+            <div class="news-content">
+                {data.tx_mask_text -> f:format.html()}
+            </div>
+        </f:if>
+    </div>
+</div>
+

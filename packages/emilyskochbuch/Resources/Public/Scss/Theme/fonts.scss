@@ -1,0 +1,42 @@
+@import "variables";
+
+.element-header {
+  font-size: 38px;
+  font-weight: bold;
+  color: $primary;
+  font-family: "peregroy-jf", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  padding-top: 40px;
+  font-size: 60px;
+  font-weight: 400;
+  color: $primary;
+  font-family: "peregroy-jf", sans-serif;
+  font-style: normal;
+  text-align: center;
+}
+
+h3 {
+  font-family: "peregroy-jf", sans-serif;
+  font-style: normal;
+  text-align: center;
+}
+
+h2 {
+  font-family: "peregroy-jf", sans-serif;
+  font-style: normal;
+  text-align: center;
+}
+
+body {
+  font-family: "inria-serif", sans-serif;
+  font-style: normal;
+}
+
+.custom-static-text {
+  font-family: 'Inria Serif', serif;
+  font-size: 16pt;
+}

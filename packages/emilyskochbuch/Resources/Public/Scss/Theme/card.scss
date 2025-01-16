@@ -1,0 +1,41 @@
+@import "variables";
+
+.card-body {
+  display: block; // Aktiviert Flexbox im Container
+  justify-content: center; // Zentriert horizontal
+  align-items: center;
+}
+
+.btn-primary {
+  display: block; // Button wird block-level-Element
+  margin: 0 auto; // Zentriert den Button horizontal
+  width: fit-content;
+}
+
+
+.card {
+  img {
+    border-radius: 50px 50px 0 0;
+    width: 100%;
+    display: block;
+    height: 210px;
+    object-fit: cover;
+  }
+}
+
+.btn-default {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: $primary;
+  font-size: large !important;
+  display: block;
+  cursor: pointer;
+  font-family: "peregroy-jf", sans-serif;
+  text-align: center !important;
+  box-shadow: none;
+}
+
+.btn-default:hover {
+  background-color: $secondary;
+}

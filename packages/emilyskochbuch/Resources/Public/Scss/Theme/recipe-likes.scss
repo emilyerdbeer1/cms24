@@ -1,0 +1,125 @@
+@import "variables";
+
+
+.recipe-title {
+  font-family: "peregroy-jf", sans-serif;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 25px;
+  color: $primary;
+  margin-top: 25px;
+}
+
+.recipe-image-container {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-left: 8.3333%; // 1 Spalte frei (12-Spalten Grid, also 100% / 12 = 8.3333%)
+  padding-right: 8.3333%;
+
+  .recipe-image {
+    max-width: 100%; // Maximale Breite des Bildes
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .recipe-likes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding-left: 20px;
+
+    .like-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      .heart-icon {
+        width: 25px;
+        height: 25px;
+
+        &.empty {
+          stroke: $primary;
+        }
+
+        &.filled {
+          fill: $primary;
+          stroke: $primary;
+        }
+      }
+    }
+
+    .like-counter {
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.recipe-details {
+  text-align: left;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.recipe-cards {
+  //object-fit: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr; // 2 Spalten: links Zutaten, rechts Zubereitung
+  gap: 20px;
+  padding-left: 8.3333%; // 1 Spalte frei
+  padding-right: 8.3333%; // 1 Spalte frei
+
+  .recipe-card {
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: 'Peregroy JF', sans-serif;
+    width: auto !important;
+    height: auto ;
+    max-width: 100%; // Maximale Breite der Karte
+
+    p {
+      margin: 0;
+    }
+
+    &.zutaten-card,
+    &.zubereitung-card {
+      .recipe-card-title {
+        color: $primary;
+      }
+    }
+
+    .zutaten-card {
+      height: 70px !important;
+      margin-right: 50px;
+    }
+
+    &.tipp-card {
+      background: $primary;
+      color: white;
+      margin-bottom: 50px;
+
+      .recipe-card-title {
+        color: white;
+      }
+
+      .tip-image {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 50px;
+        height: 100px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+h2 {
+  font-family: "peregroy-jf", sans-serif;
+}

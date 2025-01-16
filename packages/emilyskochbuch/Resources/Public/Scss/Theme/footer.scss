@@ -1,0 +1,130 @@
+@import "variables";
+/*
+.footer {
+  background-color: $secondary !important;
+}
+
+.footer-section {
+  background-color: $secondary !important;
+}
+
+.footer-menu {
+  background-color: $secondary !important;
+}
+
+//Funktioniert alles nicht oberhalb
+
+.footer-language-menu {
+  position: absolute; //Absolute Positionierung
+  right: 20px; // Abstand von der rechten Seite
+  bottom: 20px; // Abstand vom unteren Rand des Footers
+  text-align: right; // Text innerhalb des Menüs rechts ausrichten
+}
+
+.footer-navigation-list {
+  position: relative; // Relativ, um das Language-Menü nicht zu beeinflussen
+}
+
+.footer-language-menu .language-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-language-menu .language-menu li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.footer-language-menu .language-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-language-menu .language-menu a:hover {
+  text-decoration: underline;
+}
+
+*/
+
+//Footer neu
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: $secondary !important;
+  color: $primary;
+  font-weight: 300 !important;
+  font-size: 16px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1; /* Alle Container gleich breit */
+  background-color: $secondary !important;
+}
+
+.footer-center {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.footer-right {
+  text-align: right;
+  padding-right: 100px;
+}
+
+.footer-left {
+  padding-left: 100px;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: $primary;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.language-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
+.language-menu li {
+  margin-left: 10px;
+}
+
+.language-menu a {
+  text-decoration: none;
+  color: $primary;
+  font-size: 16px;
+}
+
+.language-menu a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-section-meta {
+  background-color: $secondary !important;
+}

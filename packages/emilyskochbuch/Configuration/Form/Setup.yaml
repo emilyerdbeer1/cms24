@@ -1,0 +1,20 @@
+prototypes:
+  standard:
+    formElementsDefinition:
+      Form:
+        renderingOptions:
+          templateRootPaths:
+            50: 'EXT:emilyskochbuch/Resources/Private/Templates/FormExt/'
+          partialRootPaths:
+            50: 'EXT:emilyskochbuch/Resources/Private/Partials/FormExt/'
+          layoutRootPaths:
+            50: 'EXT:emilyskochbuch/Resources/Private/Layouts/FormExt/'
+
+TYPO3:
+    CMS:
+      Form:
+        persistenceManager:
+          allowedExtensionPaths:
+            120: 'EXT:emilyskochbuch/Resources/Private/Forms/'
+            allowSaveToExtensionPaths: true
+            allowDeleteFromExtensionPaths: true

@@ -1,0 +1,256 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: kochbuchKontakt-Formular
+label: 'Kochbuch Kontakt-Formular'
+prototypeName: standard
+finishers:
+  -
+    options:
+      message: 'Vielen Dank für deine Anfrage!'
+      contentElementUid: ''
+    identifier: Confirmation
+  -
+    options:
+      subject: '{singleselect-1}'
+      recipients:
+        '{email-1}': '{text-1}'
+      senderAddress: s2310456008@fhooe.at
+      senderName: "Emily's Kochbuch"
+      addHtmlPart: true
+      attachUploads: true
+      title: '{singleselect-1}'
+    identifier: EmailToSender
+  -
+    options:
+      subject: '{singleselect-1}'
+      recipients:
+        s2310456008@fhooe.at: Emily
+      senderAddress: '{email-1}'
+      senderName: '{text-1}'
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+    identifier: EmailToReceiver
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    type: Page
+    identifier: page-1
+    label: 'Worum geht es bei deiner Anfrage?'
+    renderables:
+      -
+        properties:
+          options:
+            Feedback: Feedback
+            'Frage zu einem Rezept': 'Frage zu einem Rezept'
+            'Technisches Problem': 'Technisches Problem'
+            Sonstiges: Sonstiges
+          prependOptionLabel: 'Bitte auswählen'
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte wähle dein Anliegen aus!'
+            -
+              code: 1221560718
+              message: 'Bitte wähle dein Anliegen aus!'
+            -
+              code: 1347992400
+              message: 'Bitte wähle dein Anliegen aus!'
+            -
+              code: 1347992453
+              message: 'Bitte wähle dein Anliegen aus!'
+        type: SingleSelect
+        identifier: singleselect-1
+        label: Anliegen
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          text: 'Möchtest du unseren Newsletter abonnieren?'
+          elementClassAttribute: 'custom-static-text'
+        type: StaticText
+        identifier: statictext-1
+        label: 'Möchtest du unseren Newsletter abonnieren?'
+      -
+        properties:
+          options:
+            Ja: Ja
+            Nein: Nein
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+        type: RadioButton
+        identifier: radiobutton-1
+        label: 'Möchtest du unseren Newsletter abonnieren?'
+        defaultValue: Ja
+        validators:
+          -
+            identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    type: Page
+    identifier: page-2
+    label: 'Teile mir deine Kontaktdaten mit'
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: Name
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            minlength: '2'
+            maxlength: '50'
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte gib deinen Namen ein'
+            -
+              code: 1221560718
+              message: 'Bitte gib deinen Namen ein'
+            -
+              code: 1347992400
+              message: 'Bitte gib deinen Namen ein'
+            -
+              code: 1347992453
+              message: 'Bitte gib deinen Namen ein'
+            -
+              code: 1238110957
+              message: 'Der Name muss 2–50 Zeichen lang sein.'
+            -
+              code: 1269883975
+              message: 'Der Name muss 2–50 Zeichen lang sein.'
+            -
+              code: 1428504122
+              message: 'Der Name muss 2–50 Zeichen lang sein.'
+            -
+              code: 1238108068
+              message: 'Der Name muss 2–50 Zeichen lang sein.'
+            -
+              code: 1238108069
+              message: 'Der Name muss 2–50 Zeichen lang sein.'
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            options:
+              minimum: '2'
+              maximum: '50'
+            identifier: StringLength
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email-1
+        label: E-Mail
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte gib eine E-Mail Adresse ein.'
+            -
+              code: 1221560718
+              message: 'Bitte gib eine E-Mail Adresse ein.'
+            -
+              code: 1347992400
+              message: 'Bitte gib eine E-Mail Adresse ein.'
+            -
+              code: 1347992453
+              message: 'Bitte gib eine E-Mail Adresse ein.'
+            -
+              code: 1221559976
+              message: 'Bitte gib eine E-Mail Adresse ein.'
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        properties:
+          fluidAdditionalAttributes:
+            step: 1
+          validationErrorMessages:
+            -
+              code: 1221560288
+              message: 'Bitte gib deine Telefonnummer ein.'
+        type: Number
+        identifier: number-1
+        label: Telefonnummer
+        validators:
+          -
+            identifier: Number
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    type: Page
+    identifier: page-3
+    label: 'Was möchtest du mir mitteilen?'
+    renderables:
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: Nachricht
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            minlength: '10'
+            maxlength: '10000'
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte gib deine Nachricht ein'
+            -
+              code: 1221560718
+              message: 'Bitte gib deine Nachricht ein'
+            -
+              code: 1347992400
+              message: 'Bitte gib deine Nachricht ein'
+            -
+              code: 1347992453
+              message: 'Bitte gib deine Nachricht ein'
+            -
+              code: 1238110957
+              message: 'Bitte mindestens 10 Zeichen'
+            -
+              code: 1269883975
+              message: 'Bitte mindestens 10 Zeichen'
+            -
+              code: 1428504122
+              message: 'Bitte mindestens 10 Zeichen'
+            -
+              code: 1238108068
+              message: 'Bitte mindestens 10 Zeichen'
+            -
+              code: 1238108069
+              message: 'Bitte mindestens 10 Zeichen'
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            options:
+              minimum: '10'
+              maximum: '10000'
+            identifier: StringLength
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Absenden
+    type: SummaryPage
+    identifier: summarypage-1
+    label: 'Überprüfe deine Angaben'

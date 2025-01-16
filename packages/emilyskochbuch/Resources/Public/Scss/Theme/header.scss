@@ -1,0 +1,74 @@
+@import "variables";
+
+.navbar-nav {
+  background-color: $secondary;
+  color: $primary;
+  margin-top: 20px;
+  width: 100% !important;
+
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100vw !important;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Schatten für die Navigation */
+  position: sticky; /* Sticky machen */
+  top: 0; /* Oben fixieren */
+  z-index: 1000; /* Damit es über dem Inhalt bleibt */
+  height: 80px;
+  background-color: $secondary;
+}
+
+
+#page-header {
+  margin: 0;
+  padding: 0;
+  background-color: $secondary !important;
+}
+
+
+#topheader {
+  padding-bottom: 32px;
+}
+
+.navbar ul { // Zentrierung der Menüpunkte
+  margin: 0;
+  //padding: 10px 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar ul li {
+  margin: 0 18px;       /* Setzt den horizontalen Abstand zwischen den Punkten */
+}
+
+.navbar-link { //Funktioniert nicht
+  color: $primary;
+}
+
+.nav-link.active, .nav-link.active::before {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  content: none !important;
+}
+
+.nav-link.active, .nav-link:hover::before {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  content: none !important;
+  font-weight: bold;
+}
+
+//container-mainnav funktioniert nicht
+.container-mainnavigation {
+  width: 100%;
+}
+

@@ -6,6 +6,6 @@ TCEFORM {
 
     }
     tt_content {
-
+        layout.addItems.13 = Custom Carousel
     }
 }

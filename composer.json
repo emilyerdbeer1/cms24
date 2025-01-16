@@ -20,9 +20,11 @@
 	"require": {
 		"b13/container": "^3.0",
 		"bk2k/bootstrap-package": "^15.0",
-		"fhooe/kwm2024": "@dev",
 		"fhooe/emilyskochbuch": "@dev",
+		"fhooe/kwm2024": "@dev",
+		"georgringer/news": "^12.2",
 		"mask/mask": "^8.3",
+		"nitsan/ns-guestbook": "^13.0",
 		"typo3/cms-backend": "^12.4.0",
 		"typo3/cms-belog": "^12.4.0",
 		"typo3/cms-beuser": "^12.4.0",
